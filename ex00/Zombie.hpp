@@ -3,17 +3,16 @@
 
 #include <string>
 
-using std::string;
-
 class Zombie {
  public:
-  Zombie(string name); //, std::string type);
+  Zombie(std::string name);
   ~Zombie(void);
+  static Zombie* newZombie(std::string name);
+  static void randomChump(std::string name);
   void announce(void);
 
  private:
-  string _name;
-  // std::string _type;
+  std::string _name;
 };
 
 #endif  // __ZOMBIE_H__
