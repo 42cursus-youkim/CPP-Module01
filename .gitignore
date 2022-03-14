@@ -10,6 +10,8 @@ karenFilter
 __pycache__
 .pytest_cache
 .hypothesis
+*.replace
+test.txt
 
 # Prerequisites
 *.d
