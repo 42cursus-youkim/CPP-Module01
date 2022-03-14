@@ -13,6 +13,10 @@ int main(int argc, const char* argv[]) {
     return 1;
   }
   const string fileName = argv[1], target = argv[2], replaceWith = argv[3];
+  if (target.length() == 0) {
+    std::cout << "Target string cannot be empty" << std::endl;
+    return 1;
+  }
   Replace replace(fileName, target, replaceWith);
   replace.createReplaceFile();
   return (0);

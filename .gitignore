@@ -9,6 +9,7 @@ karenFilter
 # python
 __pycache__
 .pytest_cache
+.hypothesis
 
 # Prerequisites
 *.d

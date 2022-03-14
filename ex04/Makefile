@@ -12,7 +12,7 @@ $(NAME): $(OBJ)
 	$(CC) $(CFLAGS) -o $@ $^
 
 run: $(NAME)
-	./$(NAME) test.txt para PARA
+	./$(NAME) test.txt "para" ""
 
 .PHONY: run re test clean
 
