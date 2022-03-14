@@ -6,6 +6,10 @@ replace
 karen
 karenFilter
 
+# python
+__pycache__
+.pytest_cache
+
 # Prerequisites
 *.d
 

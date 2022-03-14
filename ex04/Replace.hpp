@@ -7,16 +7,20 @@
 using std::string;
 
 class Replace {
-  public:
-    Replace(const string& fileName, const string& toReplace,
-            const string& replaceWith);
-    void replace();
+ public:
+  Replace(const string& fileName, const string& oldStr, const string& newStr);
+  ~Replace();
 
-   private:
-    std::ifstream _fin;
-    std::ofstream _fout;
-    const string _target;
-    const string _replaceWith;
+  void createReplaceFile();
+
+ private:
+  string& replace(string& str, const string::size_type pos);
+  string& replaceLine(string& str);
+
+  std::ifstream _fin;
+  std::ofstream _fout;
+  const string& _oldStr;
+  const string& _newStr;
 };
 
 #endif  // __REPLACE_H__

@@ -14,21 +14,6 @@ int main(int argc, const char* argv[]) {
   }
   const string fileName = argv[1], target = argv[2], replaceWith = argv[3];
   Replace replace(fileName, target, replaceWith);
-  // string fileName = argv[1];
-  // string resultName = stem(fileName) + ".replace";
-  // std::ifstream input(fileName.c_str());
-  // if (input.fail()) {
-  //   std::cerr << "Failed to open " << fileName << std::endl;
-  //   return 1;
-  // }
-  // std::ofstream output;
-  // output.open(resultName.c_str());
-  // string buffer;
-  // while (std::getline(input, buffer)) {
-  //   std::cout << buffer << std::endl;
-  //   output << buffer << std::endl;
-  // }
-  // input.close();
-
+  replace.createReplaceFile();
   return (0);
 }

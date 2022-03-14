@@ -12,7 +12,7 @@ $(NAME): $(OBJ)
 	$(CC) $(CFLAGS) -o $@ $^
 
 run: $(NAME)
-	./$(NAME) test.txt world WORLD
+	./$(NAME) test.txt para PARA
 
 .PHONY: run re test clean
 

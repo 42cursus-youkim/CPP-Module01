@@ -9,7 +9,7 @@ static string stem(const string& name) {
 Replace::Replace(const string& fileName,
                  const string& target,
                  const string& replaceWith)
-    : _target(target), _replaceWith(replaceWith) {
+    : _oldStr(target), _newStr(replaceWith) {
   const string resultName = stem(fileName) + ".replace";
 
   _fin.open(fileName.c_str());
@@ -22,25 +22,31 @@ Replace::Replace(const string& fileName,
   }
 }
 
-void Replace::replace()
-{
-  char c;
-  while (_fin.get(c)) {
-    if (c == _target[0]) {
-      string buffer;
-      buffer.push_back(c);
-      _fin.get(c);
-      while (c == _target[buffer.size()]) {
-        buffer.push_back(c);
-        _fin.get(c);
-      }
-      if (buffer == _target) {
-        _fout << _replaceWith;
-      } else {
-        _fout << buffer;
-      }
-    } else {
-      _fout << c;
-    }
+Replace::~Replace() {
+  _fin.close();
+  _fout.close();
+}
+
+void Replace::createReplaceFile() {
+  string line;
+  while (std::getline(_fin, line)) {
+    _fout << replaceLine(line);
+    if (not _fin.eof())
+      _fout << "\n";
   }
+}
+
+string& Replace::replace(string& str, const string::size_type pos) {
+  return str.erase(pos, _oldStr.length()).insert(pos, _newStr);
+}
+
+string& Replace::replaceLine(string& str) {
+  string::size_type curr = 0;
+  string::size_type pos;
+
+  while ((pos = str.find(_oldStr, curr)) != string::npos) {
+    replace(str, pos);
+    curr = pos + _newStr.length();
+  }
+  return str;
 }
