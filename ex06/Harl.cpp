@@ -1,26 +1,26 @@
-#include <string>
 #include "Harl.hpp"
+#include <string>
 
 void Harl::debug(void) {
-  std::cerr << "I love to get extra bacon for my "
-               "7XL-double-cheese-triple-pickle-special-ketchup burger. "
-               "I just love it!\n";
+  std::cerr << "I love having extra bacon for my "
+               "7XL-double-cheese-triple-pickle-specialketchup burger. I "
+               "really do!\n";
 }
 
 void Harl::info(void) {
-  std::cerr
-      << "I cannot believe adding extra bacon cost more money. "
-         "You don’t put enough! If you did I would not have to ask for it!\n";
+  std::cerr << "I cannot believe adding extra bacon costs more money. You "
+               "didn’t put enough bacon in my burger! If you did, I wouldn’t "
+               "be asking for more!\n";
 }
 
 void Harl::warning(void) {
-  std::cerr << "I think I deserve to have some extra bacon for free. "
-               "I’ve been coming here for years and you just started working "
-               "here last month.\n";
+  std::cerr << "I think I deserve to have some extra bacon for free. I’ve been "
+               "coming for years whereas you started working here since last "
+               "month.\n";
 }
 
 void Harl::error(void) {
-  std::cerr << "This is unacceptable, I want to speak to the manager now.\n";
+  std::cerr << "This is unacceptable! I want to speak to the manager now.\n";
 }
 
 void Harl::complain(std::string level) {
