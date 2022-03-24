@@ -1,22 +1,19 @@
-NAME := replace
+NAME := prog.out
 CXX := c++
-CXXFLAGS := -Wall -Wextra -Werror -std=c++98
+CXXFLAGS := -Wall -Wextra -Werror -std=c++98 -Iinclude/
 
-SRC := $(wildcard *.cpp)
+SRC := $(wildcard src/*.cpp)
 OBJ := $(SRC:%.cpp=%.o)
 
-%.o: %.cpp
-	$(CXX) $(CXXFLAGS) -c $< -o $@
+.PHONY: run re test clean
 
 $(NAME): $(OBJ)
 	$(CXX) $(CXXFLAGS) -o $@ $^
 
 run: $(NAME)
-	./$(NAME) test.txt "para" ""
-
-.PHONY: run re test clean
+	./$(NAME) test.txt para !!PARA!!
 
 re: clean $(NAME)
 
 clean:
-	rm -f *.o $(NAME)
+	rm -f $(OBJ) $(NAME)
