@@ -1,10 +1,9 @@
 #include "Zombie.hpp"
 #include <iostream>
 
-Zombie::Zombie(std::string name) : _name(name) {
-}
+Zombie::Zombie(std::string name) : _name(name) {}
 
-Zombie::~Zombie(void) {
+Zombie::~Zombie() {
   std::cout << _name << ": Went back to grave...\n";
 }
 
