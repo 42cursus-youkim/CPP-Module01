@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include <iostream>
 #include <sstream>
 #include "Zombie.hpp"
@@ -9,4 +10,7 @@ int main(void) {
   for (int i = 0; i < NUM_ZOMBIES; i++)
     zombies[i].announce();
   delete[] zombies;
+
+  std::cout << "\n[[[Done.]]]\n";
+  system("leaks prog.out | grep 'leaks for'");
 }
