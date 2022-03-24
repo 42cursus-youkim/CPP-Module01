@@ -2,6 +2,7 @@
 #include <iostream>
 #include <sstream>
 #include "Zombie.hpp"
+#include "zombieUtil.hpp"
 
 const int NUM_ZOMBIES = 2;
 
