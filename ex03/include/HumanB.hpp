@@ -6,8 +6,9 @@
 class HumanB {
  public:
   HumanB(const string& name);
-  void attack(void);
   void setWeapon(Weapon& weapon);
+  
+  void attack(void);
 
  private:
   string _name;

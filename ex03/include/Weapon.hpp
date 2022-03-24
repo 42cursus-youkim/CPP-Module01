@@ -9,6 +9,7 @@ class Weapon {
  public:
   Weapon();
   Weapon(const string& type);
+
   const string& getType(void) const;
   void setType(const string& type);
 

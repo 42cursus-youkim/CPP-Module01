@@ -6,6 +6,7 @@
 class HumanA {
  public:
   HumanA(string name, Weapon& weapon);
+
   void attack(void);
 
  private:
