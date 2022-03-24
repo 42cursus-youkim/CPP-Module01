@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Karen.hpp"
+#include "Harl.hpp"
 
 enum level {
   DEBUG = 0,
@@ -19,9 +19,9 @@ static level getLevel(std::string input) {
   return NOT_LEVEL;
 }
 
-static void printFilter(const std::string& level, Karen& karen) {
+static void printFilter(const std::string& level, Harl& harl) {
   std::cout << "[" << level << "]\n";
-  karen.complain(level);
+  harl.complain(level);
 }
 
 int main(int argc, char* argv[]) {
@@ -29,20 +29,20 @@ int main(int argc, char* argv[]) {
     std::cerr << "Usage: " << argv[0] << " <level>" << std::endl;
     return (1);
   }
-  Karen karen;
+  Harl harl;
   const level lv = getLevel(argv[1]);
   switch (lv) {
     case DEBUG:
-      printFilter("DEBUG", karen);
+      printFilter("DEBUG", harl);
       // fall through
     case INFO:
-      printFilter("INFO", karen);
+      printFilter("INFO", harl);
       // fall through
     case WARNING:
-      printFilter("WARNING", karen);
+      printFilter("WARNING", harl);
       // fall through
     case ERROR:
-      printFilter("ERROR", karen);
+      printFilter("ERROR", harl);
       break;
     default:
       std::cout << "[ Probably complaing about insignificant problems ]\n";

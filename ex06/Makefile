@@ -1,4 +1,4 @@
-NAME := karenFilter
+NAME := harlFilter
 CXX := c++
 CXXFLAGS := -Wall -Wextra -Werror -std=c++98
 
@@ -26,4 +26,4 @@ run: $(NAME)
 re: clean $(NAME)
 
 clean:
-	rm -f *.o $(NAME)
+	rm -f $(OBJ) $(NAME)

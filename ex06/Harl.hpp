@@ -1,9 +1,9 @@
-#ifndef __KAREN_H__
-#define __KAREN_H__
+#ifndef __HARL_H__
+#define __HARL_H__
 
 #include <iostream>
 
-class Karen {
+class Harl {
  public:
   void complain(std::string level);
 
@@ -14,6 +14,6 @@ class Karen {
   void error(void);
 };
 
-typedef void (Karen::*KarenFunc)(void);
+typedef void (Harl::*HarlFunc)(void);
 
-#endif  // __KAREN_H__
+#endif  // __HARL_H__
