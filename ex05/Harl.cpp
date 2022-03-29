@@ -3,7 +3,7 @@
 
 void Harl::debug(void) {
   std::cerr << "I love having extra bacon for my "
-               "7XL-double-cheese-triple-pickle-specialketchup burger. I "
+               "7XL-double-cheese-triple-pickle-special-ketchup burger. I "
                "really do!\n";
 }
 
@@ -24,6 +24,7 @@ void Harl::error(void) {
 }
 
 void Harl::complain(std::string level) {
+  typedef void (Harl::*HarlFunc)(void);
   std::string levels[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
   HarlFunc funcs[4] = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
 

@@ -14,6 +14,4 @@ class Harl {
   void error(void);
 };
 
-typedef void (Harl::*HarlFunc)(void);
-
 #endif  // __HARL_H__

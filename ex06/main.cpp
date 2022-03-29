@@ -22,6 +22,7 @@ static level getLevel(std::string input) {
 static void printFilter(const std::string& level, Harl& harl) {
   std::cout << "[" << level << "]\n";
   harl.complain(level);
+  std::cout << "\n";
 }
 
 int main(int argc, char* argv[]) {
