@@ -1,4 +1,4 @@
-NAME := harl
+NAME := prog.out
 CXX := c++
 CXXFLAGS := -Wall -Wextra -Werror -std=c++98
 
