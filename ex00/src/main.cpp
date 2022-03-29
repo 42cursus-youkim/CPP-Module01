@@ -40,6 +40,6 @@ int main(void) {
   initStackZombies(NUM_ZOMBIES);
 
   std::cout << "\n[[[Done.]]]\n";
-  system("leaks prog.out | grep 'leaks for'");
+  // system("leaks prog.out | grep 'leaks for'");
   return 0;
 }

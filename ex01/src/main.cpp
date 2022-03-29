@@ -12,5 +12,5 @@ int main(void) {
   delete[] zombies;
 
   std::cout << "\n[[[Done.]]]\n";
-  system("leaks prog.out | grep 'leaks for'");
+  // system("leaks prog.out | grep 'leaks for'");
 }
